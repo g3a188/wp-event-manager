@@ -573,6 +573,7 @@ class WP_Event_Manager_Writepanels
 					<span class="tips" data-tip="<?php echo esc_attr($field['description']); ?>">[?]</span><?php endif; ?></label>
 			<input name="<?php echo esc_attr($name); ?>_hidden" type="hidden" value="<?php echo (isset($field['value']) ?  esc_attr($field['value']) : '') ?>" />
 			<select name=" <?php echo esc_attr($name); ?>" id="<?php echo esc_attr($key); ?>" class="input-select <?php echo esc_attr(isset($field['class']) ? $field['class'] : $key); ?>">
+				<option value>-- not selected --</option>
 				<?php foreach ($field['options'] as $key => $value) : ?>
 					<option value="<?php echo esc_attr($key); ?>" <?php
 																												if (isset($field['value'])) {
